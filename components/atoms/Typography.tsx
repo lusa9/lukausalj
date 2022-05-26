@@ -10,6 +10,7 @@ type TypographyVariantType =
   | "h5"
   | "h6"
   | "p"
+  | "base"
   | "sm"
   | "xs";
 type TypographyAsVariantType =
@@ -52,7 +53,7 @@ export default function Typography({
     () =>
       cn(
         componentClassNameForVariant(variant),
-        pure ? "mt-0 mb-0 mr-0 ml-0" : styledClassNameForVariant(variant),
+        !pure && styledClassNameForVariant(variant),
         align && `text-${align}`,
         classNameProp
       ),
@@ -68,7 +69,9 @@ export default function Typography({
 
 const elementTypeForVariant = (variant: TypographyVariantType) => {
   switch (variant) {
+    case "base":
     case "sm":
+    case "xs":
       return "p";
     default:
       return variant;
@@ -89,6 +92,7 @@ const componentClassNameForVariant = (variant: TypographyVariantType) => {
       return "text-lg md:text-xl";
     case "h6":
       return "md:text-lg";
+    case "base":
     case "sm":
     case "xs":
       return `text-${variant}`;

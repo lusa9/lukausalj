@@ -4,7 +4,7 @@ import { useMemo } from "react";
 export const Navigation = () => {
   const pages = useMemo(() => ["About Me", "Portfolio"], []);
   return (
-    <nav className="flex gap-1">
+    <nav className="flex gap-6">
       {pages.map((page) => (
         <NavLink key={page} {...{ page }} />
       ))}
