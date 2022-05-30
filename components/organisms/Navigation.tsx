@@ -1,12 +1,22 @@
-import { NavLink } from "components/molecules/NavLink";
-import { useMemo } from "react";
+import { NavLink, NavLinkProps } from "components/molecules/NavLink";
+import { useRouter } from "next/router";
+
+const homePage: NavLinkProps = {
+  href: "/",
+  label: "Home",
+};
+
+const otherPages: NavLinkProps[] = ["About Me", "Portfolio"].map((label) => ({
+  label,
+  href: "/" + label.toLowerCase().replace(/\s+/g, "-"),
+}));
 
 export const Navigation = () => {
-  const pages = useMemo(() => ["About Me", "Portfolio"], []);
+  const { pathname } = useRouter();
   return (
     <nav className="flex gap-6">
-      {pages.map((page) => (
-        <NavLink key={page} {...{ page }} />
+      {[homePage, ...otherPages].map((page) => (
+        <NavLink key={page.label} active={pathname === page.href} {...page} />
       ))}
     </nav>
   );
