@@ -16,13 +16,22 @@ const Home: NextPage = () => (
     <div className="md:w-2/3">
       <Typography variant="h1">Senior Frontend Developer</Typography>
       <Typography variant="p" className="sm:pr-12">
-        I'm experienced in building web apps from scratch in fast paced agile
-        environments. Currently re-engineering{" "}
-        <Link href="curio.io">
-          <a className="underline decoration-pink-500 decoration-2 underline-offset-2">
-            curio.io
+        An advocate of pixel-perfect implementations and never taking shortcuts.
+        <span className="hidden xs:inline">
+          {" "}
+          I'm experienced in building responsive web apps in fast paced
+          environments.
+        </span>
+        <br />
+        <br />
+        At the moment, working with{" "}
+        <Link href="https://curio.io/" target="_blank">
+          <a className="text-pink-500" target="_blank">
+            curio
           </a>
-        </Link>
+        </Link>{" "}
+        team on re-engineering their platform for streaming narrated audio
+        content.
       </Typography>
     </div>
     <div className="hidden md:mt-4 md:w-1/3 md:flex md:flex-col md:items-end">
