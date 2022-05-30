@@ -8,6 +8,7 @@ export const Footer = () => (
       <a
         className="hover:underline decoration-pink-500 underline-offset-2"
         href="mailto:luka.usalj@gmail.com"
+        draggable={false}
       >
         luka.usalj@gmail.com
       </a>
@@ -15,12 +16,12 @@ export const Footer = () => (
 
     <div className="flex gap-4">
       <Link href="https://www.linkedin.com/in/lukausalj/">
-        <a target="_blank">
+        <a target="_blank" draggable={false}>
           <LinkedinIcon />
         </a>
       </Link>
       <Link href="https://github.com/lusa9">
-        <a target="_blank">
+        <a target="_blank" draggable={false}>
           <GitHubIcon />
         </a>
       </Link>
