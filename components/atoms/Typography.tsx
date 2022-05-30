@@ -1,14 +1,15 @@
-import React, { useMemo } from "react";
+import React from "react";
 import cn from "classnames";
 
 type TypographyAlignType = "center" | "justify" | "left" | "right";
-type TypographyVariantType =
+export type TypographyVariantType =
   | "h1"
   | "h2"
   | "h3"
   | "h4"
   | "h5"
   | "h6"
+  | "subtitle"
   | "p"
   | "base"
   | "sm"
@@ -27,39 +28,43 @@ interface TypographyProps {
   children: React.ReactNode;
   className?: string;
   variant: TypographyVariantType;
+  onAllViewPorts?: boolean;
   as?: TypographyAsVariantType;
   align?: TypographyAlignType;
-  pure?: boolean;
+  noMargin?: boolean;
+  noLeading?: boolean;
 }
 
 /**
  * A component for displaying text
  *
- * @param children   contents of the component
- * @param className  extra classes applied to the component
- * @param variant    typography variant to be used e.g. 'h1'
- * @param as         actual HTML element to represent the component
- * @param pure       if true, default margins and paddings will not be applied
+ * @param children       contents of the component
+ * @param className      extra classes applied to the component
+ * @param variant        typography variant to be used e.g. 'h1'
+ * @param onAllViewPorts if true, desktop size will be used on all viewports
+ * @param as             actual HTML element to represent the component
+ * @param noMargin      if true, default margins will not be applied
+ * @param noLeading      if true, default leading will not be applied
  */
 export default function Typography({
   children,
   className: classNameProp,
   variant,
+  onAllViewPorts = false,
   as,
   align,
-  pure,
+  noMargin,
+  noLeading,
 }: TypographyProps) {
-  const className = useMemo(
-    () =>
-      cn(
-        componentClassNameForVariant(variant),
-        !pure && styledClassNameForVariant(variant),
-        align && `text-${align}`,
-        classNameProp
-      ),
-    [variant, pure, align, classNameProp]
+  const className = cn(
+    componentClassNameForVariant(variant, onAllViewPorts),
+    !noMargin && marginClassNameForVariant(variant),
+    !noLeading && leadingClassNameForVariant(variant),
+    align && `text-${align}`,
+    classNameProp
   );
-  const elementType = useMemo(() => elementTypeForVariant(variant), [variant]);
+
+  const elementType = elementTypeForVariant(variant);
 
   return React.createElement(as || elementType, {
     children,
@@ -69,6 +74,7 @@ export default function Typography({
 
 const elementTypeForVariant = (variant: TypographyVariantType) => {
   switch (variant) {
+    case "subtitle":
     case "base":
     case "sm":
     case "xs":
@@ -78,22 +84,32 @@ const elementTypeForVariant = (variant: TypographyVariantType) => {
   }
 };
 
-const componentClassNameForVariant = (variant: TypographyVariantType) => {
+const componentClassNameForVariant = (
+  variant: TypographyVariantType,
+  onAllViewPorts: boolean
+) => {
   switch (variant) {
     case "h1":
-      return "text-4xl md:text-5xl";
+      return onAllViewPorts ? "text-6xl" : "text-5xl md:text-6xl";
     case "h2":
-      return "text-3xl md:text-4xl";
+      return onAllViewPorts ? "text-5xl" : "text-4xl md:text-5xl";
     case "h3":
-      return "text-2xl md:text-3xl";
+      return onAllViewPorts ? "text-4xl" : "text-3xl md:text-4xl";
     case "h4":
-      return "text-xl md:text-2xl";
+      return onAllViewPorts ? "text-3xl" : "text-2xl md:text-3xl";
     case "h5":
-      return "text-lg md:text-xl";
+      return onAllViewPorts ? "text-2xl" : "text-xl md:text-2xl";
     case "h6":
-      return "md:text-lg";
+      return onAllViewPorts ? "text-xl" : "text-lg md:text-xl";
+    case "subtitle":
+      return cn(
+        "text-gray-400 dark:text-gray-400",
+        onAllViewPorts ? "text-sm" : "md:text-sm"
+      );
     case "base":
+      return onAllViewPorts ? `text-base` : `text-sm md:text-base`;
     case "sm":
+      return onAllViewPorts ? `text-sm` : `text-xs md:text-sm`;
     case "xs":
       return `text-${variant}`;
 
@@ -102,7 +118,7 @@ const componentClassNameForVariant = (variant: TypographyVariantType) => {
   }
 };
 
-const styledClassNameForVariant = (variant: TypographyVariantType) => {
+const marginClassNameForVariant = (variant: TypographyVariantType) => {
   switch (variant) {
     case "h1":
     case "h2":
@@ -113,6 +129,13 @@ const styledClassNameForVariant = (variant: TypographyVariantType) => {
       return "my-4";
     case "p":
       return "mb-10";
+    default:
+      return undefined;
+  }
+};
+
+const leadingClassNameForVariant = (variant: TypographyVariantType) => {
+  switch (variant) {
     default:
       return undefined;
   }

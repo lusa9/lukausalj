@@ -1,9 +1,7 @@
-import { Logo } from "components/atoms/Logo";
 import { Navigation } from "components/organisms/Navigation";
 
 export const Header = () => (
-  <header className="mx-2 my-1 flex justify-between">
-    <Logo />
+  <header className="p-12 md:p-14 flex justify-center">
     <Navigation />
   </header>
 );
