@@ -17,13 +17,13 @@ const Home: NextPage = () => (
       <Typography variant="h1">Senior Frontend Developer</Typography>
       <Typography variant="p" className="sm:pr-12">
         An advocate of pixel-perfect implementations and never taking shortcuts.
-        <span className="hidden xs:inline">
+        <span className="hidden sm:inline">
           {" "}
           I'm experienced in building responsive web apps in fast paced
           environments.
-        </span>
-        <br />
-        <br />
+          <br />
+          <br />
+        </span>{" "}
         At the moment, working with{" "}
         <Link href="https://curio.io/" target="_blank">
           <a className="text-pink-500" target="_blank">
@@ -38,7 +38,7 @@ const Home: NextPage = () => (
       {technologies.map((technology) => (
         <Typography
           key={technology}
-          variant="h5"
+          variant="h4"
           as="h2"
           noMargin
           noLeading
