@@ -12,9 +12,11 @@ const technologies = [
 ];
 
 const Home: NextPage = () => (
-  <div className="flex flex-col md:flex-row justify-between">
+  <div className="md:flex md:justify-between">
     <div className="md:w-2/3">
-      <Typography variant="h1">Senior Frontend Developer</Typography>
+      <Typography variant="h1" className="leading-tight">
+        Senior Frontend Developer
+      </Typography>
       <Typography variant="p" className="sm:pr-12">
         An advocate of pixel-perfect implementations and never taking shortcuts.
         <span className="hidden sm:inline">
@@ -26,7 +28,10 @@ const Home: NextPage = () => (
         </span>{" "}
         At the moment, working with{" "}
         <Link href="https://curio.io/" target="_blank">
-          <a className="text-pink-500" target="_blank">
+          <a
+            className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
+            target="_blank"
+          >
             curio
           </a>
         </Link>{" "}
@@ -34,7 +39,7 @@ const Home: NextPage = () => (
         content.
       </Typography>
     </div>
-    <div className="hidden md:mt-4 md:w-1/3 md:flex md:flex-col md:items-end">
+    <div className="hidden md:mt-12 md:w-1/3 md:flex md:flex-col md:items-end">
       {technologies.map((technology) => (
         <Typography
           key={technology}
@@ -42,7 +47,7 @@ const Home: NextPage = () => (
           as="h2"
           noMargin
           noLeading
-          className="text-slate-300 my-1"
+          className="text-slate-300 my-2 font-light"
         >
           {technology}
         </Typography>

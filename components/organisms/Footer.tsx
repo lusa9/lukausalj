@@ -6,7 +6,7 @@ export const Footer = () => (
   <footer className="p-14 md:p-14 flex flex-col items-center gap-5">
     <Typography variant="xs">
       <a
-        className="hover:underline decoration-pink-500 underline-offset-2"
+        className="hover:underline decoration-slate-300 decoration-2 underline-offset-4"
         href="mailto:luka.usalj@gmail.com"
         draggable={false}
       >
