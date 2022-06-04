@@ -66,10 +66,13 @@ export default function Typography({
 
   const elementType = elementTypeForVariant(variant);
 
-  return React.createElement(as || elementType, {
-    children,
-    className,
-  });
+  return React.createElement(
+    as || elementType,
+    {
+      className,
+    },
+    children
+  );
 }
 
 const elementTypeForVariant = (variant: TypographyVariantType) => {
