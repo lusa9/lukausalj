@@ -18,21 +18,21 @@ const Home: NextPage = () => (
         Senior Frontend Developer
       </Typography>
       <Typography variant="p" className="sm:pr-12">
-        An advocate of pixel-perfect implementations and never taking shortcuts.
+        An advocate of pixel-perfect implementations and taking no shortcuts.
         <span className="hidden sm:inline">
           {" "}
-          I'm experienced in building responsive web apps in fast paced
+          Experienced in building responsive web apps in fast paced
           environments.
           <br />
           <br />
         </span>{" "}
-        At the moment, working with{" "}
+        Currently working with{" "}
         <Link href="https://curio.io/" target="_blank">
           <a
             className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
             target="_blank"
           >
-            curio
+            Curio
           </a>
         </Link>{" "}
         team on re-engineering their platform for streaming narrated audio
