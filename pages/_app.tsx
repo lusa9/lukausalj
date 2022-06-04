@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Luka Usalj - Senior Frontend Developer</title>
+        <title>Luka Ušalj - Senior Frontend Developer</title>
         <meta
           name="description"
           content="Responsive web apps using React, Next.js, Typescript, CSS Modules and Tailwind."
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="keywords"
           content="senior srontend developer, senior react developer, senior web developer, frontend developer, react developer, web developer, app developer, progressive, responsive, pwa"
         />
-        <meta name="author" content="Luka Usalj" />
+        <meta name="author" content="Luka Ušalj" />
       </Head>
       <div className="h-screen flex flex-col">
         <Header />
