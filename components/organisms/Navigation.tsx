@@ -6,7 +6,7 @@ const homePage: NavLinkProps = {
   label: "Home",
 };
 
-const otherPages: NavLinkProps[] = ["About Me", "Portfolio"].map((label) => ({
+const otherPages: NavLinkProps[] = ["About Me", "Projects"].map((label) => ({
   label,
   href: "/" + label.toLowerCase().replace(/\s+/g, "-"),
 }));

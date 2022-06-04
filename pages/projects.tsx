@@ -5,10 +5,10 @@ import Head from "next/head";
 const AboutMe: NextPage = () => (
   <>
     <Head>
-      <title>Luka Ušalj - Portfolio</title>
+      <title>Luka Ušalj - Projects</title>
     </Head>
     <Typography variant="h1" as="h3">
-      Portfolio
+      Projects
     </Typography>
   </>
 );
