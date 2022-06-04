@@ -6,7 +6,10 @@ const homePage: NavLinkProps = {
   label: "Home",
 };
 
-const otherPages: NavLinkProps[] = [];
+const otherPages: NavLinkProps[] = ["About Me", "Portfolio"].map((label) => ({
+  label,
+  href: "/" + label.toLowerCase().replace(/\s+/g, "-"),
+}));
 
 export const Navigation = () => {
   const { pathname } = useRouter();
