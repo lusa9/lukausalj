@@ -13,46 +13,20 @@ const technologies = [
 
 const Home: NextPage = () => (
   <div className="md:flex md:justify-between">
-    <div className="md:w-2/3">
-      <Typography variant="h1" className="leading-tight">
-        Senior Frontend Developer
-      </Typography>
-      <Typography variant="p" className="sm:pr-12">
-        An advocate of pixel-perfect implementations and taking no shortcuts.
-        <span className="hidden sm:inline">
-          {" "}
-          Experienced in building responsive web apps in fast paced
-          environments.
-          <br />
-          <br />
-        </span>{" "}
-        Currently working with{" "}
-        <Link href="https://curio.io/" target="_blank">
-          <a
-            className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
-            target="_blank"
-          >
-            Curio
-          </a>
-        </Link>{" "}
-        team on re-engineering their platform for streaming narrated audio
-        content.
-      </Typography>
-    </div>
-    <div className="hidden md:mt-12 md:w-1/3 md:flex md:flex-col md:items-end">
-      {technologies.map((technology) => (
-        <Typography
-          key={technology}
-          variant="h4"
-          as="h2"
-          noMargin
-          noLeading
-          className="text-slate-300 my-2 font-light"
+    <Typography variant="p" className="lg:pr-8">
+      Currently working with{" "}
+      <Link href="https://curio.io/" target="_blank">
+        <a
+          className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
+          target="_blank"
         >
-          {technology}
-        </Typography>
-      ))}
-    </div>
+          Curio
+        </a>
+      </Link>{" "}
+      team on re-engineering their platform for streaming narrated audio
+      content.
+    </Typography>
+    <img className="md:w-3/5 lg:w-2/3 pt-14 md:pt-0" src="landing.svg" />
   </div>
 );
 
