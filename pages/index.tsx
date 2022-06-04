@@ -1,15 +1,6 @@
 import Typography from "components/atoms/Typography";
-import { Footer } from "components/organisms/Footer";
 import type { NextPage } from "next";
 import Link from "next/link";
-
-const technologies = [
-  "React.js",
-  "Next.js",
-  "Typescript",
-  "Tailwind",
-  "CSS Modules",
-];
 
 const Home: NextPage = () => (
   <div className="md:flex md:justify-between">
