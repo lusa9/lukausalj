@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="type" content="website" />
         <meta
           name="keywords"
-          content="senior srontend developer, senior react developer, senior web developer, frontend developer, react developer, web developer, app developer, progressive, responsive, pwa"
+          content="luka usalj, luka ušalj, senior frontend developer, senior react developer, senior web developer, senior nextjs developer, senior pwa developer, frontend developer, react developer, web developer, nextjs developer, pwa developer"
         />
         <meta name="author" content="Luka Ušalj" />
       </Head>
