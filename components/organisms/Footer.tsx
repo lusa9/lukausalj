@@ -1,9 +1,7 @@
 import Typography from "components/atoms/Typography";
-import Link from "next/link";
-import { Linkedin as LinkedinIcon, GitHub as GitHubIcon } from "react-feather";
 
 export const Footer = () => (
-  <footer className="flex flex-col items-center p-14 md:py-6">
+  <footer className="flex flex-col items-center px-14 pt-6 pb-6">
     <Typography variant="xs">
       <a
         className="hover:underline decoration-pink-400 decoration-2 underline-offset-4"
