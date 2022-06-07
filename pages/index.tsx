@@ -18,7 +18,7 @@ const Home: NextPage = () => (
       content.
     </Typography>
     <img
-      className="md:w-3/5 lg:w-2/3 pt-14 md:pt-0 pointer-events-none"
+      className="md:w-3/5 lg:w-2/3 pt-14 md:pt-0 pointer-events-none select-none"
       src="landing.svg"
       draggable={false}
     />
