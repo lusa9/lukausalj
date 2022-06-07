@@ -7,6 +7,38 @@ export default () => (
     <Head>
       <title>Luka Ušalj - About Me</title>
     </Head>
+    <div className="flex justify-between">
+      <div>
+        <Typography variant="h2" as="h1" className="mb-8">
+          Luka Ušalj
+        </Typography>
+        <Typography variant="p" className="mb-32 pr-32">
+          Senior frontend developer, working remotely from ☀️ Croatia. I'm
+          experienced in building responsive web apps from scratch using React,
+          Next.js, Typescript, CSS Modules and/or Tailwind. I deliver reusable
+          code resistant to change requests using stateless functional
+          components.
+        </Typography>
+      </div>
+      <div className="flex flex-col items-end gap-3 sm:pt-6 md:pt-5 lg:pt-3">
+        {["React", "Next.js", "Typescript", "CSS Modules", "Tailwind"].map(
+          (technology) => (
+            <Typography
+              key={technology}
+              variant="h4"
+              as="h1"
+              className="text-slate-400 text-right whitespace-nowrap font-extralight"
+              noMargin
+            >
+              {technology}
+            </Typography>
+          )
+        )}
+      </div>
+    </div>
+    <Typography variant="h1" className="mb-28">
+      How I Work
+    </Typography>
     <Section
       className="md:gap-8 lg:gap-4"
       image={{
