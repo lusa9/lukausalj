@@ -3,8 +3,11 @@ import type { NextPage } from "next";
 import Link from "next/link";
 
 const Home: NextPage = () => (
-  <div className="md:flex md:justify-between">
-    <Typography variant="p" className="pr-8">
+  <div className="flex md:justify-between md:items-top flex-col md:flex-row h-full">
+    <Typography
+      variant="p"
+      className="mx-4 sm:mx-8 md:-mr-12 text-center md:text-left lg:-mr-16"
+    >
       Currently working with{" "}
       <Link href="https://curio.io/" target="_blank">
         <a
@@ -17,8 +20,9 @@ const Home: NextPage = () => (
       team on re-engineering their platform for streaming narrated audio
       content.
     </Typography>
+
     <img
-      className="md:w-3/5 lg:w-2/3 pt-14 md:pt-0 pointer-events-none select-none"
+      className="md:w-3/5 lg:w-2/3 pt-14 md:pt-0 object-top	 object-contain	pointer-events-none select-none"
       src="landing.svg"
       draggable={false}
     />
