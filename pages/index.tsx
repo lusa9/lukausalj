@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Home: NextPage = () => (
   <div className="md:flex md:justify-between">
-    <Typography variant="p" className="lg:pr-8">
+    <Typography variant="p" className="pr-8">
       Currently working with{" "}
       <Link href="https://curio.io/" target="_blank">
         <a
@@ -17,7 +17,11 @@ const Home: NextPage = () => (
       team on re-engineering their platform for streaming narrated audio
       content.
     </Typography>
-    <img className="md:w-3/5 lg:w-2/3 pt-14 md:pt-0" src="landing.svg" />
+    <img
+      className="md:w-3/5 lg:w-2/3 pt-14 md:pt-0 pointer-events-none"
+      src="landing.svg"
+      draggable={false}
+    />
   </div>
 );
 
