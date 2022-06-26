@@ -17,7 +17,7 @@ const Home: NextPage = () => (
           Curio
         </a>
       </Link>{" "}
-      team on re-engineering their platform for streaming narrated audio
+      team on re-engineering platform for streaming narrated audio
       content.
     </Typography>
 

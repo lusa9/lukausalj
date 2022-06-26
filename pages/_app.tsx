@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Luka Ušalj - Senior Frontend Developer</title>
         <meta
           name="description"
-          content="Responsive web apps using React, Next.js, Typescript, CSS Modules and Tailwind. Currently working with Curio team on re-engineering their platform for streaming narrated audio content."
+          content="Responsive web apps using React, Next.js, Typescript, CSS Modules and Tailwind. Currently working with Curio team on re-engineering platform for streaming narrated audio content."
         />
         <link rel="icon" href="/favicon.ico" />
         <meta name="type" content="website" />
