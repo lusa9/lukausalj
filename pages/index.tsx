@@ -8,7 +8,7 @@ const Home: NextPage = () => (
       variant="p"
       className="mx-4 sm:mx-8 md:-mr-12 text-center md:text-left lg:-mr-16"
     >
-      Currently working with{" "}
+      A senior frontend developer, currently working with{" "}
       <Link href="https://curio.io/" target="_blank">
         <a
           className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
