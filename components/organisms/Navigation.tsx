@@ -15,6 +15,10 @@ export const Navigation = () => {
       {[homePage, ...otherPages].map((page) => (
         <NavLink key={page.label} active={pathname === page.href} {...page} />
       ))}
+      <NavLink
+        label="My CV"
+        href="https://drive.google.com/file/d/1WSCTIMc6AiaVPZwt6yZodYzKB4Kmh-BN/view"
+      />
     </nav>
   );
 };

@@ -8,17 +8,23 @@ export interface NavLinkProps {
   active?: boolean;
 }
 
-export const NavLink: React.FC<NavLinkProps> = ({ href, label, active }) => (
-  <Link {...{ href }}>
-    <a
-      className={cn(
-        "hover:underline decoration-pink-500 decoration-2 underline-offset-8",
-        active && "underline"
-      )}
-    >
-      <Typography variant="sm" onAllViewPorts>
-        {label}
-      </Typography>
-    </a>
-  </Link>
-);
+export const NavLink: React.FC<NavLinkProps> = ({ href, label, active }) => {
+  const externalLink = href.includes("http");
+  return (
+    <Link {...{ href }}>
+      <a
+        className={cn(
+          "hover:underline decoration-pink-500 decoration-2 underline-offset-8",
+          active && "underline"
+        )}
+        {...(externalLink && {
+          target: "_blank",
+        })}
+      >
+        <Typography variant="sm" onAllViewPorts>
+          {label}
+        </Typography>
+      </a>
+    </Link>
+  );
+};
