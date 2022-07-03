@@ -1,16 +1,17 @@
-import Typography from "components/atoms/Typography";
+import { CoderImg } from "components/atoms/CoderImg";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-const AboutMe: NextPage = () => (
+const Back: NextPage = () => (
   <>
     <Head>
-      <title>Luka Ušalj - Portfolio</title>
+      <title>Luka Ušalj - Visit Card</title>
     </Head>
-    <Typography variant="h1" as="h3">
-      Portfolio
-    </Typography>
+    <div className="flex justify-between">
+      <div></div>
+      <CoderImg />
+    </div>
   </>
 );
 
-export default AboutMe;
+export default Back;

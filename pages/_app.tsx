@@ -5,13 +5,15 @@ import { Header } from "components/organisms/Header";
 import { Footer } from "components/organisms/Footer";
 import { useLayoutEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { isMountedOnClient } from "helpers";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
   const [height, setHeight] = useState(0);
-  useLayoutEffect(() => {
-    setHeight(window.innerHeight);
-  }, []);
+  isMountedOnClient &&
+    useLayoutEffect(() => {
+      setHeight(window.innerHeight);
+    }, []);
 
   return (
     <>
