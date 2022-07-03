@@ -7,8 +7,10 @@ const Front: NextPage = () => (
     <Head>
       <title>Luka Ušalj - Visit Card</title>
     </Head>
-    <div className="flex flex-1 justify-center items-center">
-      <Typography variant="p">lukausalj.com</Typography>
+    <div className="flex flex-1 justify-center items-center tracking-[.2px]">
+      <Typography variant="sm" noMargin>
+        lukausalj.com
+      </Typography>
     </div>
   </>
 );

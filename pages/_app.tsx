@@ -1,4 +1,5 @@
 import "styles/globals.css";
+import cn from "classnames";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Header } from "components/organisms/Header";
@@ -33,7 +34,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <div className="h-screen flex flex-col" style={{ height }}>
         {!pathname.includes("/visit") && <Header />}
-        <div className="flex flex-col flex-1 p-8 pb-0 md:p-14 md:pt-4">
+        <div
+          className={cn(
+            "flex flex-col flex-1 p-8 md:p-14 md:pt-4",
+            !pathname.includes("/visit") && "pb-0"
+          )}
+        >
           <Component {...pageProps} />
         </div>
         {!pathname.includes("/visit") && <Footer />}
