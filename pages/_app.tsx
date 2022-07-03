@@ -4,8 +4,10 @@ import Head from "next/head";
 import { Header } from "components/organisms/Header";
 import { Footer } from "components/organisms/Footer";
 import { useLayoutEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { pathname } = useRouter();
   const [height, setHeight] = useState(0);
   useLayoutEffect(() => {
     setHeight(window.innerHeight);
@@ -28,11 +30,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="author" content="Luka Ušalj" />
       </Head>
       <div className="h-screen flex flex-col" style={{ height }}>
-        <Header />
+        {!pathname.includes("/visit") && <Header />}
         <div className="flex flex-col flex-1 p-8 pb-0 md:p-14 md:pt-4">
           <Component {...pageProps} />
         </div>
-        <Footer />
+        {!pathname.includes("/visit") && <Footer />}
       </div>
     </>
   );
