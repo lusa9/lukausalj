@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Header } from "components/organisms/Header";
 import { Footer } from "components/organisms/Footer";
 import { useLayoutEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [height, setHeight] = useState(0);
@@ -13,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Analytics />
       <Head>
         <title>Luka Ušalj - Senior Frontend Developer</title>
         <meta
