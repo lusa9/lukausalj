@@ -3,15 +3,9 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Header } from "components/organisms/Header";
 import { Footer } from "components/organisms/Footer";
-import { useLayoutEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [height, setHeight] = useState(0);
-  useLayoutEffect(() => {
-    setHeight(window.innerHeight);
-  }, []);
-
   return (
     <>
       <Analytics />
@@ -29,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta name="author" content="Luka Ušalj" />
       </Head>
-      <div className="h-screen flex flex-col" style={{ height }}>
+      <div className="h-[100svh] flex flex-col">
         <Header />
         <div className="flex flex-col flex-1 p-8 pb-0 md:p-14 md:pt-4">
           <Component {...pageProps} />
