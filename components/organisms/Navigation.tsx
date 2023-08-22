@@ -17,7 +17,7 @@ export const Navigation = () => {
       ))}
       <NavLink
         label="My CV"
-        href="https://drive.google.com/file/d/1WSCTIMc6AiaVPZwt6yZodYzKB4Kmh-BN/view"
+        href="https://docs.google.com/document/d/10pmTUmXnsYZ_7ql_NqyxiEk_qQqqiPPA_9x2Uy_Ikmw/edit?usp=sharing"
       />
     </nav>
   );
