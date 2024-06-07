@@ -8,17 +8,25 @@ const Home: NextPage = () => (
       variant="p"
       className="mx-4 sm:mx-8 md:-mr-12 text-center md:text-left lg:-mr-16"
     >
-      A senior frontend developer, currently working with{" "}
-      <Link href="https://curio.io/" target="_blank">
+      Senior Frontend Developer at{" "}
+      <Link href="https://whatdo.in" target="_blank">
         <a
           className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
           target="_blank"
         >
-          Curio
+          WhatDo
         </a>
-      </Link>{" "}
-      team on re-engineering platform for streaming narrated audio
-      content.
+      </Link>
+      <br />
+      Co-founder at{" "}
+      <Link href="https://9.agency" target="_blank">
+        <a
+          className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
+          target="_blank"
+        >
+          9.agency
+        </a>
+      </Link>
     </Typography>
 
     <img
