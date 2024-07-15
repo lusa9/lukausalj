@@ -19,7 +19,7 @@ export const Navigation = () => {
         label="My CV"
         href="https://docs.google.com/document/d/10pmTUmXnsYZ_7ql_NqyxiEk_qQqqiPPA_9x2Uy_Ikmw/edit?usp=sharing"
       />
-      <NavLink label="Portfolio" href="https://9.agency" />
+      <NavLink label="Projects" href="https://9.agency#projects" />
     </nav>
   );
 };
