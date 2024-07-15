@@ -8,7 +8,7 @@ const Home: NextPage = () => (
       variant="p"
       className="mx-4 sm:mx-8 md:-mr-12 text-center md:text-left lg:-mr-16"
     >
-      Senior Frontend Developer at{" "}
+      Senior Frontend Developer. Organically growing{" "}
       <Link href="https://whatdo.in" target="_blank">
         <a
           className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
@@ -17,8 +17,9 @@ const Home: NextPage = () => (
           WhatDo
         </a>
       </Link>
+      .
       <br />
-      Co-founder at{" "}
+      Founder of{" "}
       <Link href="https://9.agency" target="_blank">
         <a
           className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
