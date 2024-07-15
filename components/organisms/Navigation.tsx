@@ -6,7 +6,16 @@ const homePage: NavLinkProps = {
   label: "Home",
 };
 
-const otherPages: NavLinkProps[] = [];
+const otherPages: NavLinkProps[] = [
+  {
+    label: "My CV",
+    href: "https://docs.google.com/document/d/10pmTUmXnsYZ_7ql_NqyxiEk_qQqqiPPA_9x2Uy_Ikmw/edit?usp=sharing",
+  },
+  {
+    label: "Projects",
+    href: "https://9.agency#projects",
+  },
+];
 
 export const Navigation = () => {
   const { pathname } = useRouter();
@@ -15,11 +24,6 @@ export const Navigation = () => {
       {[homePage, ...otherPages].map((page) => (
         <NavLink key={page.label} active={pathname === page.href} {...page} />
       ))}
-      <NavLink
-        label="My CV"
-        href="https://docs.google.com/document/d/10pmTUmXnsYZ_7ql_NqyxiEk_qQqqiPPA_9x2Uy_Ikmw/edit?usp=sharing"
-      />
-      <NavLink label="Projects" href="https://9.agency#projects" />
     </nav>
   );
 };
