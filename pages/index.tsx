@@ -8,8 +8,8 @@ const Home: NextPage = () => (
       variant="p"
       className="mx-4 sm:mx-8 md:-mr-12 text-center md:text-left lg:-mr-16"
     >
-      Organically growing{" "}
-      <Link href="https://whatdo.in" target="_blank">
+      Author of{" "}
+      <Link href="https://whatdo.in" target="_blank" rel="noopener">
         <a
           className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
           target="_blank"
@@ -17,10 +17,33 @@ const Home: NextPage = () => (
           WhatDo
         </a>
       </Link>
+      ,{" "}
+      <Link href="https://wildstartups.com" target="_blank" rel="noopener">
+        <a
+          className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
+          target="_blank"
+        >
+          WildStartups
+        </a>
+      </Link>{" "}
+      &{" "}
+      <Link
+        href="https://www.petsandsitters.com"
+        target="_blank"
+        rel="noopener"
+      >
+        <a
+          className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
+          target="_blank"
+        >
+          Pets&Sitters
+        </a>
+      </Link>
       .
       <br />
-      Founder of{" "}
-      <Link href="https://9.agency" target="_blank">
+      <br />
+      CEO @{" "}
+      <Link href="https://9.agency" target="_blank" rel="noopener">
         <a
           className="text-pink-500 hover:underline decoration-pink-500 decoration-2 underline-offset-2"
           target="_blank"
