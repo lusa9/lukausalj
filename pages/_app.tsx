@@ -10,22 +10,22 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Analytics />
       <Head>
-        <title>Luka Ušalj - Senior Frontend Developer</title>
+        <title>Luka Ušalj - Senior NextJS Developer</title>
         <meta
           name="description"
-          content="Responsive web apps using React, Next.js, Typescript, CSS Modules and Tailwind. Currently working with Curio team on re-engineering platform for streaming narrated audio content."
+          content="High-Performance web apps using React & NextJS. Ping me if you're in demand for Senior Frontend Developer or Senior Fullstack Developer."
         />
         <link rel="icon" href="/favicon.ico" />
         <meta name="type" content="website" />
         <meta
           name="keywords"
-          content="luka usalj, luka ušalj, senior, frontend, developer, react, pwa, next, js, contract, freelance"
+          content="senior frontend developer, senior nextjs developer, lead nextjs developer, lead frontend developer, senior react developer, lead react developer, senior fullstack developer, lead fullstack developer"
         />
         <meta name="author" content="Luka Ušalj" />
       </Head>
       <div className="h-[100svh] flex flex-col">
         <Header />
-        <div className="flex flex-col flex-1 p-8 pb-0 md:p-14 md:pt-4">
+        <div className="flex flex-col flex-1 p-8 pb-0 md:p-14">
           <Component {...pageProps} />
         </div>
         <Footer />
